@@ -1,0 +1,110 @@
+*
+{
+    box-sizing: border-box;
+}
+.child
+{
+    float: left;
+    width: 50%;
+    border: 1px solid darkblue ;
+}
+.content
+{
+    text-align: center;
+    /* align-content: center; */
+    height: 400px;
+    justify-items: center;
+}
+.img
+{
+    width: 45;
+}
+.img:hover img
+{
+    animation: moving 0.4s ease infinite;
+    background-color: aqua
+}
+/* ////////////////////// */
+.parent
+{
+    width: 90%;
+    align-content: center;
+    margin: auto;
+    overflow: hidden;
+}
+.container 
+{
+    width: 33.33%;
+    float: left;
+    position: relative;
+    border: 15px solid white;
+    overflow: hidden;
+
+}
+.container img
+{
+    width: 100%;
+    transition: .5s 1s ;
+}
+
+
+.container .layer
+{
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0;
+    transition:  1s ;
+}
+.container .layer h2
+{
+    background-color: rgba(0, 0, 0, .4);
+    font-size: 40px;
+    padding: 20px;
+    margin: 0;
+    transform: translateX(150%);
+    transition: 1s 1.3s;
+}
+.container .layer p
+{
+    transform: translateX(150%);
+    transition: 1s 2s;
+
+
+}
+.container:hover .layer
+{
+    opacity: 1;
+    transform: rotate(360deg);
+} 
+.container:hover img
+{
+    transform: scale(1.2);
+}
+.container:hover h2
+{
+    transform: translateX(0);
+
+}
+.container:hover p
+{
+    transform: translateX(0);
+
+}
+.position
+{
+    position: relative;
+}
+.absolute
+{
+    width: 200px;
+    position: absolute;
+    height: 200px;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+}
